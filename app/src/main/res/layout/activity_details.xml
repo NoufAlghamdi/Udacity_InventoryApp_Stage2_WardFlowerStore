@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.ward.activities.DetailsActivity">
+
+    <ImageView
+        android:id="@+id/imageview_details_image"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/no_image_available" />
+
+    <TextView
+        android:id="@+id/textview_details_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        tools:text="Orchid, Lily and Rose Hand-tied"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageview_details_image" />
+
+    <TextView
+        android:id="@+id/textview_details_quantitylable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Quantity:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_details_name" />
+
+    <Button
+        android:id="@+id/button_details_decreasequantity"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="16dp"
+        android:text="-"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textview_details_quantitylable"
+        app:layout_constraintStart_toEndOf="@+id/textview_details_quantitylable" />
+
+    <TextView
+        android:id="@+id/textview_details_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:minWidth="36dp"
+        android:text="1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textview_details_quantitylable"
+        app:layout_constraintStart_toEndOf="@+id/button_details_decreasequantity" />
+
+    <Button
+        android:id="@+id/button_details_increasequantity"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:text="+"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textview_details_quantitylable"
+        app:layout_constraintStart_toEndOf="@+id/textview_details_quantity" />
+
+    <TextView
+        android:id="@+id/textview_details_totallabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Total:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_details_quantitylable" />
+
+    <TextView
+        android:id="@+id/textview_details_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="2300"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintBaseline_toBaselineOf="@+id/textview_details_totallabel"
+        app:layout_constraintStart_toStartOf="@+id/button_details_decreasequantity" />
+
+    <TextView
+        android:id="@+id/textview_details_currency"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="$"
+        app:layout_constraintBaseline_toBaselineOf="@id/textview_details_total"
+        app:layout_constraintStart_toEndOf="@+id/textview_details_total" />
+
+    <TextView
+        android:id="@+id/textview_details_supplierlable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Supplier:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textview_details_totallabel" />
+
+    <TextView
+        android:id="@+id/textview_details_suppliername"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        tools:text="Gulf Flowers,"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        app:layout_constraintStart_toStartOf="@+id/textview_details_supplierlable"
+        app:layout_constraintTop_toBottomOf="@+id/textview_details_supplierlable" />
+
+    <ImageButton
+        android:id="@+id/imagebutton_details_emailsupplier"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:background="@null"
+        app:layout_constraintStart_toStartOf="@+id/textview_details_suppliername"
+        app:layout_constraintTop_toBottomOf="@+id/textview_details_suppliername"
+        app:srcCompat="@drawable/ic_email" />
+
+    <ImageButton
+        android:id="@+id/imagebutton_details_callsupplier"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="8dp"
+        android:background="@null"
+        app:layout_constraintStart_toStartOf="@+id/imagebutton_details_emailsupplier"
+        app:layout_constraintTop_toBottomOf="@+id/imagebutton_details_emailsupplier"
+        app:srcCompat="@drawable/ic_call" />
+
+    <TextView
+        android:id="@+id/textview_details_supplieremail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="someone@exampl.com"
+        app:layout_constraintBottom_toBottomOf="@+id/imagebutton_details_emailsupplier"
+        app:layout_constraintStart_toEndOf="@+id/imagebutton_details_emailsupplier"
+        app:layout_constraintTop_toTopOf="@+id/imagebutton_details_emailsupplier" />
+
+    <TextView
+        android:id="@+id/textview_details_supplierphonenumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="556668888"
+        app:layout_constraintBottom_toBottomOf="@+id/imagebutton_details_callsupplier"
+        app:layout_constraintStart_toEndOf="@+id/imagebutton_details_callsupplier"
+        app:layout_constraintTop_toTopOf="@+id/imagebutton_details_callsupplier" />
+
+</android.support.constraint.ConstraintLayout>

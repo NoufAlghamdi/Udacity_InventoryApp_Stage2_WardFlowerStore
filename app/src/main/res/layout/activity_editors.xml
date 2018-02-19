@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="16dp">
+
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/textview_editors_productinfo"
+            style="@style/style_editors_titletextview"
+            android:text="Product Info:"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageview_editors_image"
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintDimensionRatio="w,1:1"
+            app:layout_constraintStart_toEndOf="@+id/textview_editors_productinfo"
+            app:layout_constraintTop_toTopOf="@+id/textview_editors_productinfo"
+            app:srcCompat="@drawable/no_image_available" />
+
+        <Button
+            android:id="@+id/button_editors_pickfromgallery"
+            style="@style/style_editors_pickfromgallerybutton"
+            android:layout_marginTop="8dp"
+            android:text="Pick from gallery"
+            app:layout_constraintEnd_toEndOf="@+id/imageview_editors_image"
+            app:layout_constraintHorizontal_weight="1"
+            app:layout_constraintTop_toBottomOf="@+id/imageview_editors_image" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textinputlayout_editors_name"
+            style="@style/style_editors_textinputlayout"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/button_editors_pickfromgallery" >
+            <EditText
+                android:id="@+id/edittext_editors_name"
+                style="@style/style_editors_edittext"
+                android:hint="Name *"
+                android:inputType="textPersonName"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textinputlayout_editors_price"
+            style="@style/style_editors_textinputlayout"
+            app:layout_constraintTop_toBottomOf="@+id/textinputlayout_editors_name" >
+
+            <EditText
+                android:id="@+id/edittext_editors_price"
+                style="@style/style_editors_edittext"
+                android:layout_height="41dp"
+                android:hint="Price *"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textinputlayout_editors_quantity"
+            style="@style/style_editors_textinputlayout"
+            app:layout_constraintTop_toBottomOf="@+id/textinputlayout_editors_price">
+
+            <EditText
+                android:id="@+id/edittext_editors_quantity"
+                style="@style/style_editors_edittext"
+                android:hint="Available Quantity *"
+                android:inputType="number" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textview_editors_supplierinfo"
+            style="@style/style_editors_titletextview"
+            android:text="Supplier Info:"
+            app:layout_constraintBottom_toTopOf="@+id/textinputlayout_editors_supplieremail"
+            app:layout_constraintTop_toTopOf="@+id/textinputlayout_editors_suppliername" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textinputlayout_editors_suppliername"
+            style="@style/style_editors_textinputlayout"
+            android:layout_marginTop="24dp"
+            app:layout_constraintTop_toBottomOf="@+id/textinputlayout_editors_quantity">
+        <EditText
+            android:id="@+id/edittext_editors_suppliername"
+            style="@style/style_editors_edittext"
+            android:hint="Name *"
+            android:inputType="textPersonName"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textinputlayout_editors_supplieremail"
+            style="@style/style_editors_textinputlayout"
+            app:layout_constraintTop_toBottomOf="@+id/textinputlayout_editors_suppliername">
+        <EditText
+            android:id="@+id/edittext_editors_supplieremail"
+            style="@style/style_editors_edittext"
+            android:hint="Email *"
+            android:inputType="textEmailAddress"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textinputlayout_editors_supplierphonenumber"
+            style="@style/style_editors_textinputlayout"
+            app:layout_constraintTop_toBottomOf="@+id/textinputlayout_editors_supplieremail">
+
+            <EditText
+                android:id="@+id/edittext_editors_supplierphonenumber"
+                style="@style/style_editors_edittext"
+                android:hint="Phone Number *"
+                android:inputType="phone" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textview_editors_currency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="16dp"
+            android:text="$"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            app:layout_constraintBottom_toBottomOf="@id/textinputlayout_editors_price"
+            app:layout_constraintEnd_toEndOf="@+id/textinputlayout_editors_price" />
+
+        <!--<android.support.design.widget.TextInputLayout-->
+            <!--android:id="@+id/textinputlayout_editors_supplierphonenumber"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginEnd="16dp"-->
+            <!--android:layout_marginStart="16dp"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"-->
+            <!--app:layout_constraintStart_toEndOf="@+id/textview_editors_productinfo"-->
+            <!--app:layout_constraintTop_toBottomOf="@+id/textinputlayout_editors_supplieremail">-->
+            <!--<EditText-->
+                <!--android:id="@+id/edittext_editors_supplierphonenumber"-->
+                <!--style="@style/style_editors_edittext"-->
+                <!--android:hint="Phone Number"-->
+                <!--android:inputType="phone"-->
+                <!--android:maxLines="1"/>-->
+        <!--</android.support.design.widget.TextInputLayout>-->
+
+    </android.support.constraint.ConstraintLayout>
+</ScrollView>
